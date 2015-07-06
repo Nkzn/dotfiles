@@ -1,0 +1,3 @@
+#!/bin/sh
+REMOTE=${1:-"origin"}
+git push ${REMOTE} `git rev-parse --abbrev-ref HEAD`

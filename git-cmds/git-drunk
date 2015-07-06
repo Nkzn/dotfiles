@@ -1,0 +1,13 @@
+#!/bin/sh
+
+PREFIX="I'm drunk now"
+MESSAGE="[${PREFIX}] `date +\"%Y/%m/%d %T\"`"
+
+if [ $# -eq 0 ]
+then
+    git add -u
+    git commit -m "${MESSAGE}"
+    echo 'You should review this commit later, with sober senses.'
+else
+    echo 'You should be drunk more!!!!'
+fi
