@@ -5,6 +5,7 @@ Deploy dotfiles.
 
 ```
 $ ./setup.sh
+$ ./mac-provisioning/setup.sh
 ```
 
 Thanks
