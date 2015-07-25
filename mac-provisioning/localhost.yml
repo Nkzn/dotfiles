@@ -26,6 +26,7 @@
       - { name: ruby-build }
       - { name: rbenv-gem-rehash }
       - { name: rbenv-default-gems }
+      - { name: gradle }
     homebrew_cask_packages:
       - { name: emacs-mac }
       - { name: iterm2 }
