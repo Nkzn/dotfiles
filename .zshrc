@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/nkzn/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -60,9 +60,9 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/git-cmds
 export MANPATH="/usr/local/man:$MANPATH"
 
 JAVA_HOME=/Library/Java/Home
-ANDROID_HOME=/Users/nkzn/Library/Android/sdk
+ANDROID_HOME=~/Library/Android/sdk
 
-export PATH=$PATH:/Users/nkzn/.nodebrew/current/bin
+export PATH=$PATH:~/.nodebrew/current/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export LOLCOMMITS_FONT=/Library/Fonts/ヒラギノ角ゴ\ StdN\ W8.otf
 export LOLCOMMITS_DELAY=3
