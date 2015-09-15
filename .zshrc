@@ -62,7 +62,6 @@ export MANPATH="/usr/local/man:$MANPATH"
 JAVA_HOME=/Library/Java/Home
 ANDROID_HOME=~/Library/Android/sdk
 
-export PATH=$PATH:~/.nodebrew/current/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export LOLCOMMITS_FONT=/Library/Fonts/ヒラギノ角ゴ\ StdN\ W8.otf
 export LOLCOMMITS_DELAY=3
