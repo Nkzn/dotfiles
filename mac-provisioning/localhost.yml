@@ -27,6 +27,7 @@
       - { name: rbenv-gem-rehash }
       - { name: rbenv-default-gems }
       - { name: gradle }
+      - { name: pwgen }
     homebrew_cask_packages:
       - { name: emacs-mac }
       - { name: firefox }
