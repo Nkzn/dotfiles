@@ -1,0 +1,35 @@
+#! /usr/bin/ruby
+
+# The merge commit expression when a merge request accepted
+MERGE_REQUEST_LOG_REGEXP = /commit [0-9a-f]+\nMerge: ([0-9a-f]{7}) ([0-9a-f]{7})\nAuthor: (.+)\nDate:   (.+)\n\n\s{4}Merge branch '(.+)' into '(.+)'\n\s{4}\n\s{4}(.+)\n[\s\S]+?See merge request (![0-9]{1,4})/
+
+range = nil
+if ARGV[0] == "-h" then
+  puts "List of GitLab merge requests between the range expression like 'branch-a...branch-b' (with Markdown friendly list format).\n\n"
+  puts "usage: git mr-diff mybranch...development"
+  puts "   or  git mr-diff (default: master...HEAD)"
+  exit
+elsif ARGV[0] then
+  range = ARGV[0]
+end
+
+if range == nil then
+  range = "master...HEAD"
+end
+
+puts "List merge requests for range: #{range}\n\n"
+
+logs = `git rev-list --right-only #{range} | xargs git show -q`
+
+mrlogs = []
+logs.scan(MERGE_REQUEST_LOG_REGEXP) do |matched|
+  mrlogs.push({:number => matched[7], :title => matched[6]})
+end
+
+mrlogs.sort! do |a, b|
+  a[:number] <=> b[:number]
+end
+
+mrlogs.each do |mrlog|
+  puts "* #{mrlog[:number]} #{mrlog[:title]}"
+end

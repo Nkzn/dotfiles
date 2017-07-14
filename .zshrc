@@ -55,25 +55,23 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/git-cmds
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:~/git-cmds:~/bin
 
 export MANPATH="/usr/local/man:$MANPATH"
 
-JAVA_HOME=/Library/Java/Home
-ANDROID_HOME=~/Library/Android/sdk
+JAVA_HOME=export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
 
+ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
 export LOLCOMMITS_FONT=/Library/Fonts/ヒラギノ角ゴ\ StdN\ W8.otf
 export LOLCOMMITS_DELAY=3
 
-if [ -d ${HOME}/.rbenv  ] ; then
-  PATH=${HOME}/.rbenv/shims:${PATH}
-  export PATH
-  eval "$(rbenv init -)"
-fi
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
-alias now="git now"
-alias nowf="git now --fixup"
+eval "$(rbenv init -)"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

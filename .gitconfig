@@ -1,13 +1,14 @@
 
 [core]
 editor = emacs
+	excludesfile = /Users/nakagawa/.gitignore
 
 [hub]
 protocol = https
 
 [user]
 name = Yukiya Nakagawa
-email = yn.airscope@gmail.com
+email = y.nakagawa@water-cell.jp
 
 [color]
 ui = true
