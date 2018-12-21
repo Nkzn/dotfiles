@@ -65,6 +65,10 @@ ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
+FLUTTER_HOME=/Users/y.nakagawa/bin/flutter
+export FLUTTER_HOME
+export PATH=$PATH:$FLUTTER_HOME/bin
+
 export LOLCOMMITS_FONT=/Library/Fonts/ヒラギノ角ゴ\ StdN\ W8.otf
 export LOLCOMMITS_DELAY=3
 
