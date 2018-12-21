@@ -1,7 +1,7 @@
 #! /usr/bin/ruby
 
 # The merge commit expression when a merge request accepted
-MERGE_REQUEST_LOG_REGEXP = /commit [0-9a-f]+\nMerge: ([0-9a-f]{7}) ([0-9a-f]{7})\nAuthor: (.+)\nDate:   (.+)\n\n\s{4}Merge branch '(.+)' into '(.+)'\n\s{4}\n\s{4}(.+)\n[\s\S]+?See merge request (![0-9]{1,4})/
+MERGE_REQUEST_LOG_REGEXP = /commit [0-9a-f]+\nMerge: ([0-9a-f]{7,40}) ([0-9a-f]{7,40})\nAuthor: (.+)\nDate:   (.+)\n\n\s{4}Merge branch '(.+)' into '(.+)'\n\s{4}\n\s{4}(.+)\n[\s\S]+?See merge request (![0-9]{1,4})/
 
 range = nil
 if ARGV[0] == "-h" then
