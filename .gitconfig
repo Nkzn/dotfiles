@@ -1,14 +1,14 @@
 
 [core]
-editor = emacs
-	excludesfile = /Users/nakagawa/.gitignore
+	excludesfile = /Users/y.nakagawa/.gitignore_global
+	editor = emacs
 
 [hub]
 protocol = https
 
 [user]
-name = Yukiya Nakagawa
-email = y.nakagawa@water-cell.jp
+	name = Yukiya Nakagawa
+	email = y.nakagawa@water-cell.jp
 
 [color]
 ui = true
@@ -20,3 +20,13 @@ s = status
 b = branch
 graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
 delb = delete-merged-branches
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[ghq]
+	root = ~/dev/src
+[commit]
+	template = /Users/y.nakagawa/.stCommitMsg

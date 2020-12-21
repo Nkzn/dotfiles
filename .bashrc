@@ -25,6 +25,12 @@ export JAVA_HOME=$JAVA8_HOME
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/git-cmds:$PATH
 export PATH=$HOME/.anyenv/bin:$PATH
+export PATH=$HOME/flutter/bin:$PATH
+export PATH=$HOME/flutter/.pub-cache/bin:$PATH
+export PATH=$HOME/flutter/bin/cache/dart-sdk/bin/:$PATH
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
 
 # alias
 alias java10="$JAVA10_HOME/bin/java"
@@ -50,3 +56,5 @@ export FLUTTER_HOME=/Users/y.nakagawa/bin/flutter
 export PATH=$FLUTTER_HOME/bin:$PATH
 
 # misc
+
+
