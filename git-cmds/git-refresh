@@ -1,0 +1,5 @@
+#!/bin/sh
+git switch main
+git pull origin main
+git delb
+git fetch origin --prune

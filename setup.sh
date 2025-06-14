@@ -10,7 +10,7 @@ find $ABSPATH \
   | xargs -I@ ln -s @ $HOME
 
 git clone https://github.com/riywo/anyenv ~/.anyenv
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install wget
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O /usr/local/etc/bash_completion.d/git-completion.bash
 chmod a+x /usr/local/etc/bash_completion.d/git-completion.bash

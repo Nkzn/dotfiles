@@ -1,6 +1,6 @@
 
 [core]
-	excludesfile = /Users/y.nakagawa/.gitignore_global
+	excludesfile = /Users/nkzn/.gitignore_global
 	editor = emacs
 
 [hub]
@@ -8,7 +8,7 @@ protocol = https
 
 [user]
 	name = Yukiya Nakagawa
-	email = y.nakagawa@water-cell.jp
+	email = yukiya@monicle.co.jp
 
 [color]
 ui = true
@@ -24,9 +24,14 @@ delb = delete-merged-branches
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [ghq]
 	root = ~/dev/src
-[commit]
-	template = /Users/y.nakagawa/.stCommitMsg
+[pull]
+	ff = only
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
